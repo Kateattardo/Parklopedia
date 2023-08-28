@@ -25,8 +25,9 @@ mongoose.connect(DATABASE_URL, CONFIG)
 mongoose.connection
 .on('open', () => console.log('mongoose connected'))
 .on('close', () => console.log('mongoose disconnected'))
-.on('error', (err) => console.log('mongoose error', err))
+.on('error', (err) => console.log('mongoose error\n', err))
 
 ////////////////////////////////////////
 /////export connection
 ///////////////////////////////////////
+module.exports = mongoose
