@@ -24,6 +24,8 @@ EJS
 
  -As a user I want to rate my local parks based on personal experience so others can have a more enjoyable experience.
 
+ -As a user I want to ability to delete or change my review.
+
  -As a user I want to see timestamp reviews from other user based most recent park conditions.
 
  -As a user I want to be able to review specific dog runs in the park.
@@ -47,6 +49,9 @@ EJS
  -As a user I want to be able to make time stamped comments on current ceremonies taking place such as weddings and quinceneras so other users can plan accordingly.
 
  -As a user I want to be able to make time stamped comments on local vendors locations so other users can plan accordingly.
- 
+
   -As a user I want to be able to get time stamped notifications about missing pets and children.
  
+ ### Wireframes
+ ![Wireframes 1 & 2](images/IMG_WF1&2.jpg)
+ ![Wireframes 3](images/IMG_WF3.jpg)
