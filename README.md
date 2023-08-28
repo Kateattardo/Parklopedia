@@ -55,3 +55,6 @@ EJS
  ### Wireframes
  ![Wireframes 1 & 2](images/WF%201&2-1.jpg)
  ![Wireframes 3](images/WF%203.jpg)
+
+ ### Entity Relationship Diagrams
+ ![ERD](images/IMG_7473.jpg)
