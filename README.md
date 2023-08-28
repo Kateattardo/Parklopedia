@@ -59,3 +59,22 @@ EJS
 
  ### Entity Relationship Diagrams
  ![ERD](images/IMG_7475.jpg)
+
+ ### Restful Routes/ CRUD Mapping
+
+ HTTP Method<br>(Verb) | Path/Endpoint/URI  | CRUD Operation | Typical<br>Controller Action | Has Data<br>Payload
+-----------|------------------|------------------|:---:|:---:
+GET     | /parks          | Read all __parks_ | index | No
+GET     | /parks/:id      | Read a specific _parksId_ | show | No
+POST    | /parks/parkId   | Create a new parks/parkId/|create | Yes
+PUT     | /parks/:parkid  | Update specified _park_  | update | Yes
+DELETE  | /parks/:parkid  | Delete specified _post_ | delete | No
+
+### Routing for Related Resources (One:Many & Many:Many Relationships)
+
+HTTP Method<br>(Verb) | Path/Endpoint/URI  | CRUD Operation<br>or Purpose | Note
+-----------|------------------|------------------|:---:
+GET     | /parks/:parkId/show-more-comments | Read all _comments_ for a _post_ |
+GET     | /parks/:parkiD/add-comment/new | n/a (Non-RESTful) | 
+POST     | /parks/:parkiD/submit-reviews| Create a _comment_ for a _post_ (1:M) | 
+
