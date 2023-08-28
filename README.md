@@ -58,4 +58,4 @@ EJS
  ![Wireframes 3](images/WF%203.jpg)
 
  ### Entity Relationship Diagrams
- ![ERD](images/entity-diagram.jpg)
+ ![ERD](images/IMG_7475.jpg)
