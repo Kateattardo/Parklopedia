@@ -74,7 +74,7 @@ DELETE  | /parks/:parkiD | Delete specified _post_ | delete | No
 
 HTTP Method<br>(Verb) | Path/Endpoint/URI  | CRUD Operation<br>or Purpose | Note
 -----------|------------------|------------------|:---:
-GET     | /parks/:parkiD/show-more-comments | Read all _comments_ for a _post_ |
-GET     | /parks/:parkiD/add-comment/new | n/a (Non-RESTful) | 
-POST     | /parks/:parkiD/submit-reviews| Create a _comment_ for a _post_ (1:M) | 
+GET     | /parks/:parkiD/show-more-comments | Read all _comments_ for a _post_ |No payload
+GET     | /parks/:parkiD/add-comment/new | n/a (Non-RESTful) |OPTIONALLY display a dedicated form used to create a nested resource 
+POST     | /parks/:parkiD/submit-reviews| Create a _comment_ for a _post_ (1:M) | Needs Payload
 
