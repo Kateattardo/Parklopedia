@@ -1,8 +1,6 @@
 ////////////////////////////////////////
 /////dependencies
 ///////////////////////////////////////
-
-
 require('dotenv').config
 const mongoose = require('mongoose')
 
@@ -12,7 +10,7 @@ const mongoose = require('mongoose')
 const DATABASE_URL= process.env.DATABASE_URL
 
 //DB confiq object
-cont CONFIG = {
+const CONFIG = {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }

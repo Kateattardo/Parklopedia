@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 ////////////////////////////////////////
 /////server listener
 ///////////////////////////////////////
-const PORT= process.env.port
+const PORT= process.env.PORT
 app.listen(PORT, () => {
   console.log('Parklopedia is ready')
 
