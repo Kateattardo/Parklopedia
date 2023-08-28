@@ -19,6 +19,7 @@ EJS
 
 ### Completed
  - As a user I want the ability to log into the app using Oauth authentication so I don't have to create another username and password.
+ -As a user I want the ability to log out when not using the app.
  -As a user I want to rate my local parks based on personal experience so others can have a more enjoyable experience.
  -As a user I want to see timestamp reviews from other user based most recent park conditions.
  -As a user I want to be able to review specific dog runs in the park.
