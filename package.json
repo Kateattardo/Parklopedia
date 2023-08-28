@@ -1,0 +1,23 @@
+{
+  "name": "parklopedia",
+  "version": "1.0.0",
+  "description": "PARKLOPEDIA Do you love spending a day in the park?  Enjoy Parklopedia, this app allows you to view and comment on parks in your area.  With timestamped user updates you can plan your day better weather your having a picnic, bbg, game of softball or just a good spot to ready with your furry friends.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.4.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0"
+  }
+}
