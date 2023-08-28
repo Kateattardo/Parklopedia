@@ -53,5 +53,5 @@ EJS
   -As a user I want to be able to get time stamped notifications about missing pets and children.
  
  ### Wireframes
- ![Wireframes 1 & 2](images/IMG_WF1&2.jpg)
- ![Wireframes 3](images/IMG_WF3.jpg)
+ ![Wireframes 1 & 2](images/WF%201&2-1.jpg)
+ ![Wireframes 3](images/WF%203.jpg)
