@@ -59,3 +59,4 @@ EJS
 
  ### Entity Relationship Diagrams
  ![ERD](images/IMG_7473.jpg)
+ ![ERD](images/ERD.jpg)
