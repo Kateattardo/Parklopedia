@@ -6,7 +6,8 @@
 //mongoose connection from utils
 const mongoose = require('../utils/connection')
 //import commentSchema, to use as subdoc
-const reviewSchema = require('./review')
+const commentSchema = require('./comment')
+
 
 // destruct the Schema/model fucntion from mongoose
 const { Schema, model } = mongoose
@@ -24,7 +25,7 @@ const reviewSchema = new Schema({
   },
   owner: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'User'
     required: true
   },
   parkId: {
@@ -55,13 +56,14 @@ const parkSchema = new Schema({
   },
   playground: {
     type: Boolean
-  }
-  owner: {
-      type: Schema.Types.ObjectId,
-      ref: 'User'
   },
   rating: {
     type: Number
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
   },
   parkId: {
     type: String,
@@ -71,4 +73,4 @@ const parkSchema = new Schema({
 }, { timestamps: true })
 
 // export the park and review schema
-module.exports = mongoose.model('Park', parkSchemaSchema);
+module.exports = mongoose.model('Park', parkSchema);
