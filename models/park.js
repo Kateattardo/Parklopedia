@@ -6,7 +6,7 @@
 //mongoose connection from utils
 const mongoose = require('../utils/connection')
 //import commentSchema, to use as subdoc
-const commentSchema = require('./comment')
+const reviewSchema = require('./review')
 
 // destruct the Schema/model fucntion from mongoose
 const { Schema, model } = mongoose
