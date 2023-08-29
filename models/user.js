@@ -16,7 +16,7 @@ const userSchema = new Schema({
         required: true
     },
     email: String,
-    avatar: String
+
 }, { 
     timestamps: true 
 })

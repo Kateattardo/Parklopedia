@@ -70,5 +70,5 @@ const parkSchema = new Schema({
  comments: [commentSchema]
 }, { timestamps: true })
 
-// export the fruite and review schema
+// export the park and review schema
 module.exports = mongoose.model('Park', parkSchemaSchema);
