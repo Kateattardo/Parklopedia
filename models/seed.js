@@ -23,4 +23,28 @@ db.on('open', () => {
     {name: 'Flushing Meadows Corona Park',location: 'Queens', walkingTrails: true, dogRun: true, bbqPicnic: true, playground: true},
     {name: 'Freshkills Park', location:'Staten Island', walkingTrails: true, dogRun: false, bbqPicnic: true, playground: false }  
    ]
+
+   //when we seed the db, we remove everything from this collection
+   Park.deleteMany({owner:null})
+      .then(() => {
+         //then add startParks to collection
+         //then close our connection to the db
+         Park.create(startParks)
+            .then(data => {
+               console.log('these are the parks \n', data)
+               db.close()
+
+            })
+            .catch(err => {
+               console.log('something went wrong \n', err)
+               db.close()
+            })
+
+      })
+      //handle errors
+      .catch(err => {
+         console.log('something went wrong \n', err)
+         db.close()
+      })
+
 })
