@@ -12,6 +12,32 @@ const commentSchema = require('./comment')
 // destruct the Schema/model fucntion from mongoose
 const { Schema, model } = mongoose
 
+//review Schema
+const reviewSchema = new Schema({
+  review: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 5
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  
+  },
+  parkId: {
+    type: String,
+    unique:true
+  },
+  comments: [commentSchema]
+}, {
+  timestamps: true
+});
+
 // Parks schema
 const parkSchema = new Schema({
   name: {
@@ -47,31 +73,7 @@ const parkSchema = new Schema({
  reviews: [reviewSchema]
 }, { timestamps: true })
 
-//review Schema
-const reviewSchema = new Schema({
-  review: {
-    type: String,
-    required: true
-  },
-  rating: {
-    type: Number,
-    min: 1,
-    max: 5,
-    default: 5
-  },
-  owner: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  
-  },
-  parkId: {
-    type: String,
-    unique:true
-  },
-  comments: [commentSchema]
-}, {
-  timestamps: true
-});
+
 
 // make the park model
 // the model method takes two arguments
