@@ -53,6 +53,7 @@ router.post('/', checkLogin, (req, res) => {
 //edit
 router.get('/edit/:id', checkLogin, (req, res) => {
   Park.findById(req.params.id)
+
   .then(park => {
     console.log('found this park', park)
 
@@ -106,6 +107,7 @@ router.delete('/:id', checkLogin, (req, res) => {
 //show
 router.get('/:id', (req, res) => {
   Park.findById(req.params.id)
+  .populate('comments.owner')
   .then(parks => {
     console.log('found this park', park)
 
