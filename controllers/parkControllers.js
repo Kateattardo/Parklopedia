@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const Park = require('../models/park')
 const park = require('../models/park')
+const checkLogin = require('../utils/ensureLoggedIn');
 
 //const axios = require('axios')
 
