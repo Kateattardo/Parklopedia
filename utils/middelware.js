@@ -17,7 +17,7 @@ const passport = require('passport')
 require('./passport')
 
 
-const middelware = (app) => {
+const middleware = (app) => {
   console.log('middleware function running')
   app.use(methodOverride('_method'))
   app.use(morgan('tiny'))
