@@ -1,6 +1,6 @@
 // import the passport module
 const passport = require('passport');
-const user = require('../models/user');
+const User = require('../models/user');
 
 // define our passport oauth strategy
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
@@ -14,7 +14,7 @@ passport.use(new GoogleStrategy(
         callbackURL: process.env.GOOGLE_CALLBACK
     },
     // the verify callback function
-    async function(accessToken, refreshToken, clientSecret,profile, cb) {
+    async function(accessToken, refreshToken, profile, cb) {
         // a user has logged in with OAuth
         try {
             // check for the user in our db
@@ -26,6 +26,7 @@ passport.use(new GoogleStrategy(
                 name: profile.displayName,
                 googleId: profile.id,
                 email: profile.emails[0].value,
+                avatar: profile.photos[0].value
             })
             return cb(null, user)
         } catch (err) {
@@ -39,6 +40,6 @@ passport.serializeUser(function(user, cb) {
     cb(null, user._id)
 })
 // this is the method to deserialize our users
-passport.deserializeUser(async function(userID, cb) {
+passport.deserializeUser(async function(userId, cb) {
     cb(null, await User.findById(userId))
 })
