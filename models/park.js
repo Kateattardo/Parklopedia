@@ -10,7 +10,7 @@ const commentSchema = require('./comment')
 
 
 // destruct the Schema/model fucntion from mongoose
-const { Schema, model } = mongoose
+const { Schema } = mongoose
 
 const reviewSchema = new Schema({
   review: {
@@ -26,7 +26,7 @@ const reviewSchema = new Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-    required: true
+  
   },
   parkId: {
     type: String,
@@ -62,14 +62,14 @@ const parkSchema = new Schema({
   },
   owner: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
+    ref: 'User'
   },
   parkId: {
     type: String,
     unique:true
   },
- comments: [commentSchema]
+ comments: [commentSchema],
+ reviews: [reviewSchema]
 }, { timestamps: true })
 
 // export the park and review schema
