@@ -20,7 +20,7 @@ router.post('/:parkId', checkLogin, (req, res) => {
     req.body.author = req.user._id
 
     // find the park
-    Park.findById(req.params.parkIdId)
+    Park.findById(req.params.parkId)
         // push the comment into the comments array
         // save the park
         .then(park => {
@@ -70,7 +70,7 @@ router.delete('/:parkId/:commentId', checkLogin, (req, res) => {
         })
         .then(park => {
             // redirect to the show page
-            res.redirect(`/parkss/${park._id}`)
+            res.redirect(`/parks/${park._id}`)
         })
         .catch(error => console.error)
 })
