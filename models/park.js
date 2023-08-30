@@ -10,32 +10,7 @@ const commentSchema = require('./comment')
 
 
 // destruct the Schema/model fucntion from mongoose
-const { Schema } = mongoose
-
-const reviewSchema = new Schema({
-  review: {
-    type: String,
-    required: true
-  },
-  rating: {
-    type: Number,
-    min: 1,
-    max: 5,
-    default: 5
-  },
-  owner: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  
-  },
-  parkId: {
-    type: String,
-    unique:true
-  },
-  comments: [commentSchema]
-}, {
-  timestamps: true
-});
+const { Schema, model } = mongoose
 
 // Parks schema
 const parkSchema = new Schema({
@@ -72,5 +47,40 @@ const parkSchema = new Schema({
  reviews: [reviewSchema]
 }, { timestamps: true })
 
+//review Schema
+const reviewSchema = new Schema({
+  review: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 5
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  
+  },
+  parkId: {
+    type: String,
+    unique:true
+  },
+  comments: [commentSchema]
+}, {
+  timestamps: true
+});
+
+// make the park model
+// the model method takes two arguments
+// the first is what we call our model
+// the second is the schema used to build the model
+const Park = model('Park', parkSchema)
+
+
+
+
 // export the park and review schema
-module.exports = mongoose.model('Park', parkSchema);
+module.exports = Park
