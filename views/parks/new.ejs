@@ -1,0 +1,30 @@
+<%- include('../partials/nav') %>
+
+<div class="container-sm">
+  <form action="/parks" method="POST">
+      <fieldset>
+          <label class="form-label">Park Name:</label>
+          <input type="text" class="form-control" name="name" placeholder="Enter park name" required>
+          
+          <label class="form-label">Description:</label>
+          <textarea class="form-control" name="desc" placeholder="Enter park description"></textarea>
+          
+          <label class="form-label">Walking Trail:</label>
+          <input type="checkbox" class="form-check-control" name="walkingTrail">
+          
+          <label class="form-label">BBQ/Picnic Area:</label>
+          <input type="checkbox" class="form-check-control" name="bbqPicnic">
+          
+          <label class="form-label">Dog Run:</label>
+          <input type="checkbox" class="form-check-control" name="dogRun">
+          
+          <label class="form-label">Playground:</label>
+          <input type="checkbox" class="form-check-control" name="playground">
+          
+          <br>
+          <hr>
+          <input type="submit" class="btn btn-success" value="Add Park">
+      </fieldset>
+  </form>
+</div>
+<%- include('../partials/footer') %>
