@@ -4,7 +4,7 @@
 const express = require('express')
 require('dotenv').config()
 const path= require('path')
-const middelware = require('./utils/middelware')
+const middleware = require('./utils/middelware')
 
 //Middelware for this file
 
@@ -20,9 +20,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 ////////////////////////////////////////
-/////Middelware
+/////Middleware
 ///////////////////////////////////////
-middelware(app)
+middleware(app)
 
 
 ////////////////////////////////////////
