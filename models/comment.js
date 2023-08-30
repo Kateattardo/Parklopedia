@@ -11,11 +11,11 @@ const { Schema } = mongoose
 //comment Schema
 const commentSchema = new Schema({
   note: {
-    tupe: String,
+    type: String,
     required: true
   },
   owner: {
-    type: Schema.Types.objectsId,
+    type: Schema.Types.ObjectId,
     ref: 'User'
   }
 }, {
