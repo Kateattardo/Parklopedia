@@ -43,4 +43,4 @@ const middleware = (app) => {
 ////////////////////////////////////////
 /////Module to Export
 ///////////////////////////////////////
-module.exports = middelware
+module.exports = middleware

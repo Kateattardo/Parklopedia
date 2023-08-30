@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/', AuthRouter)
-app.use('/parks', ParkRouterRouter)
+app.use('/parks', ParkRouter)
 app.use('/comments', CommentRouter)
 
 

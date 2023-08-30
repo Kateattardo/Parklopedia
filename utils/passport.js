@@ -14,7 +14,7 @@ passport.use(new GoogleStrategy(
         callbackURL: process.env.GOOGLE_CALLBACK
     },
     // the verify callback function
-    async function(accessToken, refreshToken, profile, cb) {
+    async function(accessToken, refreshToken, clientSecret,profile, cb) {
         // a user has logged in with OAuth
         try {
             // check for the user in our db
