@@ -29,10 +29,8 @@ middelware(app)
 /////Routes
 ///////////////////////////////////////
 app.get('/', (req, res) => {
-  res.send('welcome to Parklopedia')
+  res.redirect('/parks')
 })
-
-
 
 app.use('/', AuthRouter)
 app.use('/parks', ParkRouterRouter)
