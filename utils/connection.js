@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 /////DB connection
 ///////////////////////////////////////
 const DATABASE_URL= process.env.DATABASE_URL
+console.log('this is the db')
 
 //DB confiq object
 const CONFIG = {

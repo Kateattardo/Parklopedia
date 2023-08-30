@@ -9,6 +9,9 @@ const middelware = require('./utils/middelware')
 //Middelware for this file
 
 //routers/controllers will be imported here
+const AuthRouter = require('./controllers/authControllers')
+const ParkRouter = require('./controllers/parkControllers')
+const CommentRouter = require('./controllers/commentControllers')
 
 const app = express()
 
@@ -28,6 +31,12 @@ middelware(app)
 app.get('/', (req, res) => {
   res.send('welcome to Parklopedia')
 })
+
+
+
+app.use('/', AuthRouter)
+app.use('/parks', ParkRouterRouter)
+app.use('/comments', CommentRouter)
 
 
 
