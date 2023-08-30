@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const Park = require('../models/park')
 const checkLogin = require('../utils/ensureLoggedIn')
-const park = require('../models/park')
+
 
 const router = express.Router()
 
@@ -53,7 +53,7 @@ router.patch('/:id', checkLogin, (req, res) => {
 router.delete('/:parkId/:commentId', checkLogin, (req, res) => {
     const fId = req.params.parkId
     const cId = req.params.commentId
-    // find the fruit
+    // find the park
     Park.findById(pId)
         .then(park => {
             // isolate the comment

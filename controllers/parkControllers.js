@@ -34,11 +34,14 @@ router.post('/', checkLogin, (req, res) => {
   // need to assign owner
   req.body.owner = req.user._id
   // handle our checkbox
-  req.body.readyToEat = req.body.readyToEat === 'on' ? true : false
+  req.body.walkingTrail = req.body.walkingTrail === 'on' ? true : false;
+  req.body.bbqPicnic = req.body.bbqPicnic === 'on' ? true : false;
+  req.body.dogRun = req.body.dogRun === 'on' ? true : false;
+  req.body.playground = req.body.playground === 'on' ? true : false;
 
   console.log(req.body)
   Park.create(req.body)
-      .then(fruit => {
+      .then(park => {
           res.redirect(`/parks/${park._id}`)
       })
       .catch(err => {
@@ -47,12 +50,12 @@ router.post('/', checkLogin, (req, res) => {
       })
 })
 //edit
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', checkLogin, (req, res) => {
   Park.findById(req.params.id)
-  .then(parks => {
+  .then(park => {
     console.log('found this park', park)
 
-    res.send(`Edit page for ${park.name}`)
+    res.render('parks/edit', { park, title: `Edit ${park.name}`})
   })
   .catch(error => console.error)
 })
@@ -105,7 +108,7 @@ router.get('/:id', (req, res) => {
   .then(parks => {
     console.log('found this park', park)
 
-    res.json(park)
+    res.render("parks/show", { park, title:`${park.name}`})
   })
   .catch(error => console.error)
 })
