@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
 })
 //New
 router.get('/new', checkLogin, (req, res) => {
-  Park.find({})
   res.render('parks/new', {title: 'Add a new Park'})
 })
 //create

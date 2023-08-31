@@ -56,8 +56,8 @@
                       <div class="card-body">
                           <p><%= comm.review %></p>
                           <div class="d-flex justify-content-between">
-                              <small>author: <%= comm.owner.name %></small>
-                              <% if (user && comm.owner?._id == user.id) { %>
+                              <small>owner <%= comm %></small>
+                              <% if (user && comm?._id == user.id) { %>
                                   <form action="/comments/<%= park._id%>/<%= comm._id %>?_method=DELETE" method="POST">
                                       <input type="submit" class="btn btn-danger" value="X">
                                   </form>
