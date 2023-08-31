@@ -29,10 +29,7 @@ const reviewSchema = new Schema({
     ref: 'User'
   
   },
-  parkId: {
-    type: String,
-    unique:true
-  },
+
   comments: [commentSchema]
 }, {
   timestamps: true
@@ -65,10 +62,7 @@ const parkSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
-  parkId: {
-    type: String,
-    unique:true
-  },
+
  comments: [commentSchema],
  reviews: [reviewSchema]
 }, { timestamps: true })

@@ -5,7 +5,6 @@ const express = require('express')
 require('dotenv').config()
 
 const Park = require('../models/park')
-const park = require('../models/park')
 const checkLogin = require('../utils/ensureLoggedIn');
 
 //const axios = require('axios')
@@ -53,8 +52,7 @@ router.post('/', checkLogin, (req, res) => {
 //edit
 router.get('/edit/:id', checkLogin, (req, res) => {
   Park.findById(req.params.id)
-
-  .then(park => {
+   .then(park => {
     console.log('found this park', park)
 
     res.render('parks/edit', { park, title: `Edit ${park.name}`})
@@ -107,8 +105,9 @@ router.delete('/:id', checkLogin, (req, res) => {
 //show
 router.get('/:id', (req, res) => {
   Park.findById(req.params.id)
+  .populate('owner')
   .populate('comments.owner')
-  .then(parks => {
+  .then(park => {
     console.log('found this park', park)
 
     res.render("parks/show", { park, title:`${park.name}`})
