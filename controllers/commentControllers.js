@@ -17,7 +17,7 @@ const router = express.Router()
 // Create
 router.post('/:parkId', checkLogin, (req, res) => {
     // need to assign owner
-    req.body.author = req.user._id
+    req.body.user = req.user._id
 
     // find the park
     Park.findById(req.params.parkId)
@@ -51,7 +51,7 @@ router.patch('/:id', checkLogin, (req, res) => {
 
 // Delete
 router.delete('/:parkId/:commentId', checkLogin, (req, res) => {
-    const fId = req.params.parkId
+    const pId = req.params.parkId
     const cId = req.params.commentId
     // find the park
     Park.findById(pId)
@@ -59,7 +59,7 @@ router.delete('/:parkId/:commentId', checkLogin, (req, res) => {
             // isolate the comment
             const theComment = park.comments.id(cId)
             // check for ownership
-            if (req.user && theComment.author == req.user.id) {
+            if (req.user && theComment.owner == req.user.id) {
                 // run a document method to remove the comment(could also use .remove())
                 theComment.deleteOne()
                 // save the parent model
