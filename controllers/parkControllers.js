@@ -18,7 +18,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
     Park.find({})
     .then(parks => {
-      console.log('found these parks', parks)
+      
 
       res.render('parks/index', { parks })
     })
@@ -52,7 +52,7 @@ router.post('/', checkLogin, (req, res) => {
 router.get('/edit/:id', checkLogin, (req, res) => {
   Park.findById(req.params.id)
    .then(park => {
-    console.log('found this park', park)
+    
 
     res.render('parks/edit', { park, title: `Edit ${park.name}`})
   })
@@ -107,7 +107,7 @@ router.get('/:id', (req, res) => {
   .populate('owner')
   .populate('comments.owner')
   .then(park => {
-    console.log('found this park', park)
+    
 
     res.render("parks/show", { park, title:`${park.name}`})
   })
