@@ -54,7 +54,7 @@
               <% park.comments.forEach(comm => {%>
                   <div class="card mb-4 shadow">
                       <div class="card-body">
-                          <p><%= comm.review %></p>
+                          <p><%= comm.note %></p>
                           <div class="d-flex justify-content-between">
                               <small>owner <%= comm %></small>
                               <% if (user && comm.owner?._id == user.id) { %>

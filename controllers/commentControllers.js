@@ -17,7 +17,7 @@ const router = express.Router()
 // Create
 router.post('/:parkId', checkLogin, (req, res) => {
     // need to assign owner
-    req.body.user = req.user._id
+    req.body.owner = req.user._id
 
     // find the park
     Park.findById(req.params.parkId)
