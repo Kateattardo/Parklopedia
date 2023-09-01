@@ -1,6 +1,6 @@
 <%- include('../partials/nav') %>
 
-
+<div class="background">
 <div class="container-md">
   <% if (park.owner) {%>
       <small>Created by: <%= park.owner.name %></small>
@@ -38,8 +38,19 @@
           <form action="/comments/<%= park._id %>" method="POST">
               <fieldset>
                   <legend>Add Comment</legend>
+                  <label class="form-label">rating:</label>
+                  <input class="form-control mb-1" type="number" min="1" max="10"name="rating">
                   <label class="form-label">comment:</label>
                   <input class="form-control mb-1" type="text" name="note">
+                  <label class="form-label">topic:</label>
+                  <select name="topic">
+                    <option value="General" selected>General</option>
+                    <option value="Dog runs">Dog run</option>
+                    <option value="Playgrounds">Playgrounds</option>
+                    <option value="Public restrooms">Public restrooms</option>
+                    <option value="Landscaping">Landscaping</option>
+                    <option value="Construction">Construction</option>
+                  </select>
                   <input type="submit" class="btn btn-success" value="add comment">
               </fieldset>
           </form>
@@ -55,8 +66,11 @@
                   <div class="card mb-4 shadow">
                       <div class="card-body">
                           <p><%= comm.note %></p>
+                          <p><%= comm.rating %></p>
+                          <p><%= comm.topic %></p>
+                          <p><%= comm.createdAt.toLocaleString()%></p>
                           <div class="d-flex justify-content-between">
-                              <small>owner <%= comm %></small>
+                              <small>owner <%= comm.owner?.name %></small>
                               <% if (user && comm.owner?._id == user.id) { %>
                                   <form action="/comments/<%= park._id%>/<%= comm._id %>?_method=DELETE" method="POST">
                                       <input type="submit" class="btn btn-danger" value="X">
@@ -71,6 +85,7 @@
           <p>No Comments Yet</p>
       <% } %>
   </div>
+</div>
 </div>
 
 <%- include('../partials/footer') %>
