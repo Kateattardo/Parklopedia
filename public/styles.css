@@ -10,10 +10,10 @@
 
 body {
   
-  background-color: lightyellow;
+  background-color: navy;
   padding: 25px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: red;
+  color: yellow;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
