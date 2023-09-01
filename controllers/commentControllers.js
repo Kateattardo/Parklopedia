@@ -25,7 +25,6 @@ router.post('/:parkId', checkLogin, (req, res) => {
         // save the park
         .then(park => {
             park.comments.push(req.body)
-
             return park.save()
         })
         // redirect
