@@ -17,7 +17,15 @@ const commentSchema = new Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  }
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max:10,
+  },
+  topic: {
+    type: String,
+  },
 }, {
   timestamps: true
 })

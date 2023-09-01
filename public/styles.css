@@ -1,7 +1,19 @@
+.background  {
+  background-image: url('/parkHP.jpg') ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+}
+
+
 body {
+  
   background-color: lightyellow;
   padding: 25px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,3 +33,4 @@ a > img {
 .color-div {
   height: 5vh;
 }
+
