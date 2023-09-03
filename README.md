@@ -23,9 +23,9 @@ EJS
 
  -As a user I want to rate by number my local parks based on personal experience so others can have a more enjoyable experience.
 
- -As a user I want the ability to write a written review of my local parks.
+ -As a user I want the ability to leave comments about my local parks.
 
- -As a user I want to ability to delete or change my review.
+ -As a user I want to ability to delete my comments.
 
  -As a user I want to see timestamp reviews from other user based most recent park conditions.
 

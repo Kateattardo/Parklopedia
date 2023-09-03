@@ -6,10 +6,37 @@
   height: 100vh;
 
 }
+.park-details {
+  color: white;
+}
+
+.navbar.bg-light {
+  background-color: #d1ffcc !important;
+  border-radius: 10px;
+}
+.app-name-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  text-align: center;
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+}
+.app-description-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+}
 
 
 body {
-  
+  background-image: url('/parkHP.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-color: navy;
   padding: 25px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -32,5 +59,23 @@ a > img {
 
 .color-div {
   height: 5vh;
+}
+.star-rating {
+  direction: rtl;
+  font-size: 24px;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  color: gray;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+  color: gold;
 }
 
