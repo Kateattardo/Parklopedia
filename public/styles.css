@@ -6,6 +6,7 @@
   height: 100vh;
 
 }
+
 .park-details {
   color: white;
 }
@@ -13,6 +14,7 @@
 .navbar.bg-light {
   background-color: #d1ffcc !important;
   border-radius: 10px;
+  font-size: x-large;
 }
 .app-name-container {
   background-color: rgba(255, 255, 255, 0.6);
@@ -39,7 +41,8 @@ body {
   background-position: center center;
   background-color: navy;
   padding: 25px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Amatic SC', cursive;
+  font-size: x-large;
   color: turquoise;
   min-height: 100vh;
   display: flex;
@@ -70,12 +73,13 @@ a > img {
 }
 
 .star-rating label {
-  color: gray;
+  color: white;
   font-size: 24px;
   cursor: pointer;
 }
 
 .star-rating input[type="radio"]:checked ~ label {
   color: gold;
+  
 }
 
