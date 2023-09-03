@@ -2,6 +2,7 @@
 
 <div class="background">
 <div class="container-md">
+<div class="park-details">
   <% if (park.owner) {%>
       <small>Created by: <%= park.owner.name %></small>
   <% } %>
@@ -39,7 +40,13 @@
               <fieldset>
                   <legend>Add Comment</legend>
                   <label class="form-label">rating:</label>
-                  <input class="form-control mb-1" type="number" min="1" max="10"name="rating">
+                  <div class="star-rating">
+                    <input type="radio" name="rating" value="1" id="rating1"><label for="rating1" class="fa fa-star"></label>
+                    <input type="radio" name="rating" value="2" id="rating2"><label for="rating2" class="fa fa-star"></label>
+                    <input type="radio" name="rating" value="3" id="rating3"><label for="rating3" class="fa fa-star"></label>
+                    <input type="radio" name="rating" value="4" id="rating4"><label for="rating4" class="fa fa-star"></label>
+                    <input type="radio" name="rating" value="5" id="rating5"><label for="rating5" class="fa fa-star"></label>
+                  <input class="form-control mb-1" type="number" min="1" max="5"name="rating">
                   <label class="form-label">comment:</label>
                   <input class="form-control mb-1" type="text" name="note">
                   <label class="form-label">topic:</label>
@@ -55,6 +62,7 @@
               </fieldset>
           </form>
       </div>
+    </div>
   <% } %>
   <hr>
   <div class="container-md">
@@ -67,6 +75,14 @@
                       <div class="card-body">
                           <p><%= comm.note %></p>
                           <p><%= comm.rating %></p>
+                          <div class="display-rating">
+                            <% for(let i = 0; i < comm.rating; i++) { %>
+                                <span class="fa fa-star"></span>
+                            <% } %>
+                            <% for(let i = comm.rating; i < 5; i++) { %>
+                                <span class="fa fa-star-o"></span>
+                            <% } %>
+                        </div>
                           <p><%= comm.topic %></p>
                           <p><%= comm.createdAt.toLocaleString()%></p>
                           <div class="d-flex justify-content-between">
@@ -85,6 +101,7 @@
           <p>No Comments Yet</p>
       <% } %>
   </div>
+</div>
 </div>
 </div>
 

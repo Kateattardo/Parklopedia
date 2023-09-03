@@ -1,8 +1,9 @@
 <%- include('./header') %>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">Parklopedia</a>
+
+        <a href="/" class="navbar-brand">Home</a>
         <% if (user) {%>
             <a href="/parks" class="nav-link text-warning me-3">
                 Hello <%= user.name %>
@@ -13,9 +14,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <% if (user) {%>
-                <a href="/parks" class="nav-link text-light me-3">All Parks</a>
-                <a href="/parks" class="nav-link text-light me-3">Api Parks</a>
-                <a href="/parks/new" class="nav-link text-light me-3">Add New Park</a>
+                <a href="/parks" class="nav-link text-dark me-3">All Parks</a>
+                <a href="/parks/new" class="nav-link text-dark me-3">Add New Park</a>
                 <a href="/logout" class="nav-link text-danger me-3">LOG OUT</a>
             <% } else { %>
                 <a href="/auth/google" class="login">LOG IN&nbsp;
@@ -24,5 +24,22 @@
             <% } %>
         </div>
     </div>
- </div>  
+ </div> 
+</div> 
 </nav>
+  <div class="app-name-container mt-4">
+    <div class="app-info opaque-container">
+        <h2>Parklopedia</h2>
+        <p>An app for park lovers.</p>
+    </div>
+</div>
+</div>
+
+<div class="app-description-container mt-4">
+    <div class="app-description opaque-container">
+        <p>This site is for users to rate and comment about favorite local parks.
+            Users are encouraged to post comments about servral park topics 
+            as well as daily ongoings experienced.
+        </p>
+    </div>
+</div>
