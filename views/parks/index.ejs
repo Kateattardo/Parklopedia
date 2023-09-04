@@ -1,15 +1,17 @@
 <%- include('../partials/nav') %>
 
-<div class="container-md">
-    <ul>
-        <% parks.forEach(park => {%>
-            <li>
-                <a href="/parks/<%= park._id %>">
-                    <%= park.name %>
-                </a>
-            </li>
-        <% }) %>
-    </ul>
-</div>
+    <div class="container-md">
+        <% if (user) { %>
+            <ul>
+                <% parks.forEach(park=> {%>
+                    <li>
+                        <a href="/parks/<%= park._id %>" class="park-link">
+                            <%= park.name %>
+                        </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        <% } %>
+    </div>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

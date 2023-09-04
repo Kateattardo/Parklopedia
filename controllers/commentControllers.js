@@ -16,6 +16,7 @@ const router = express.Router()
 
 // Create
 router.post('/:parkId', checkLogin, (req, res) => {
+    console.log('req.body', req.body)
     // need to assign owner
     req.body.owner = req.user._id
 
