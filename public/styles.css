@@ -58,7 +58,7 @@ body {
 }
 
 .park-details-container {
-background-color: rgba(255, 255, 255, 0.8);
+background-color: rgba(255, 255, 255, 0.6);
 color: black;
 border-radius: 10px;
 
@@ -88,7 +88,7 @@ a > img {
 }
 
 .star-rating label {
-  color: white;
+  color: grey;
   font-size: 24px;
   cursor: pointer;
 }

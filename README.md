@@ -33,13 +33,14 @@ EJS
 
  -As a user I want to be able to review specific playgrounds in the park.
 
+  -As a user I want to be able to make comments on current landscaping/construction projects going on so other users can plan accordingly.
+
+   -As a user I want to review public restrooms in the park.
+
  -As a user I want to be able to review specific areas of the park if the park is larger then a few blocks.
 
  -As a user I want to be able to get info on park sculptures and landmakrks.
 
- -As a user I want to be able to make comments on current landscaping/construction projects going on so other users can plan accordingly.
-
- -As a user I want to review public restrooms in the park.
 
  -As a user I want to be able to make time stamped comments on current sport events going on so other users can plan accordingly.
 
